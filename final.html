@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>SIgn Up Platform</title>
+    <link href="final.css" rel = "stylesheet">
+    <script src="final.js" ></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h3>코드캠프 회원가입</h3>
+        <input class="box" id="email" type="text" placeholder="이메일을 입력해 주세요." oninput="qqq()"/>
+        <div class="warning" id="warningE"></div>
+        <input class="box" id="name" type="text" placeholder="이름을 입력해 주세요."/>
+        <div class="warning" id="warningN"></div>
+        <input class="box" id="pass1" type="password" placeholder="비밀번호를 입력해 주세요." oninput="qqq()"/>
+        <div class="warning" id="warningP1"></div>
+        <input class="box" id="pass2" type="password" placeholder="비밀번호를 다시 입력해 주세요." oninput="qqq()"/>
+        <div class="warning" id="warningP2"></div>
+        <div class="phone__wrapper">
+            <input id = "phone1" type ="text" size = "3" maxlength="3" oninput="changeP1()"/> - 
+            <input id = "phone2" type ="text" size = "4" maxlength="4" oninput="changeP2()"/> - 
+            <input id = "phone3" type ="text" size = "4" maxlength="4" oninput="changeP3()"/>
+        </div>
+        <div class="warning" id="warningP"></div>
+        <div class="token__wrapper">
+            <span class="token" id="nums">000000</span>
+            <button id = "myPhone" onclick="changeNum()" disabled>인증번호 전송</button>
+        </div>
+        <div class="token__wrapper">
+            <span class="token__timer" id ="count">03:00</span>
+            <button id ="myToken" onclick = "alert1()" disabled>인증하기</button>
+        </div>
+        <div class="location__wrapper">
+            <select class="location" id = "location">
+                <option disabled selected>지역을 선택하세요.</option>
+                <option>서울</option>
+                <option>경기</option>
+                <option>인천</option>
+                <option>부산</option>
+            </select>
+        </div>
+        <div class="warning" id="warningL"></div>
+        <div class="gender__wrapper">
+            <div class = "gender"><input type="radio" name="gender" id="woman"/>여성 </div>
+            <div class="gender"><input type="radio" name="gender" id="man"/>남성</div>
+        </div>
+    <div class="warning" id="warningG"></div>
+    <hr />
+    <div class="footer">
+    <button id="myButton" onclick="LastSignup()" disabled>가입하기</button> </div>
+    </div>
+</body>
+</html>
